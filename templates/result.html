@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Verification Result</title>
+  </head>
+  <body>
+    <h2>📄 Document Verification Result</h2>
+
+    <p><strong>Status:</strong> {{ result.status }}</p>
+    <p><strong>Message:</strong> {{ result.message }}</p>
+
+    {% if result.qr_data %}
+    <p><strong>QR Code Detected:</strong> {{ result.qr_data }}</p>
+    {% endif %} {% if result.ocr_text %}
+    <p><strong>Extracted Text (OCR):</strong></p>
+    <pre>{{ result.ocr_text }}</pre>
+    {% endif %}
+
+    <br />
+    <a href="/">⏎ Upload Another</a>
+  </body>
+</html>
